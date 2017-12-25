@@ -7,23 +7,23 @@ import static com.example.sort.Data.NUMBERS;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        sort(NUMBERS, 0, NUMBERS.length);
-        System.out.println(Arrays.toString(NUMBERS));
+        int[] sortedNumbers = sort(NUMBERS);
+        System.out.println(Arrays.toString(sortedNumbers));
     }
 
-    private static void sort(int[] array, int start, int end) {
-        if (start >= end) return;
-
-        int middle = (start + end) / 2;
-        //左边排序
-        sort(array, start, middle);
-        //右边排序
-        sort(array, middle + 1, end);
-        //合并
-        merge(array, start, middle, end);
-    }
-
-    private static void merge(int[] array, int start, int middle, int end) {
-        //TODO
+    private static int[] sort(int[] array) {
+        for (int i = array.length - 1; i > 0; i--) {
+            boolean exchanged = false;
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+                    exchanged = true;
+                }
+            }
+            if (!exchanged) break;
+        }
+        return array;
     }
 }
