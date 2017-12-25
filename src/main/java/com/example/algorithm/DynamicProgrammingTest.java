@@ -29,6 +29,7 @@ public class DynamicProgrammingTest {
 
                 for (int j = 1; j <= i / 2; ++j) {
                     int currentProduct = products[j] * products[i - j];
+                    System.out.println("j:" + j + ",i-j:" + (i - j));
                     if (currentProduct > maxProduct) {
                         maxProduct = currentProduct;
                     }

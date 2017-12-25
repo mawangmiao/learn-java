@@ -22,7 +22,7 @@ public class QuickSort {
     private static int split(int[] array, int start, int end) {
         int middleValue = array[start];
         while (start < end) {
-            //从右往左找到比中间值小的第一个数(如果相等, 则跳过, 留到下一次递归时处理)
+            //从右往左找到比中间值小的第一个数(如果相等, 则跳过, 因为交换也两个相等的数是做无用功, 所以留到下一次递归时处理)
             while (start < end && array[end] >= middleValue) {
                 end--;
                 System.out.print(" end:" + end);

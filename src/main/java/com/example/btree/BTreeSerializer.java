@@ -59,7 +59,7 @@ public class BTreeSerializer {
         BTreeNode<Integer> root = new BTreeNode<>(Integer.valueOf(data));
         //递归反序列化左边
         root.left = serializeInternal(queue);
-        //递归反反反序列化右边
+        //递归反序列化右边
         root.right = serializeInternal(queue);
         return root;
     }
