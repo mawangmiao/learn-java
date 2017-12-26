@@ -8,10 +8,10 @@ public class LinkedListReverseTest {
         LinkedListNode head = new LinkedListNode(1);
         LinkedListPrinter.print(reverse(head));
         System.out.println("----------------");
-        head = LinkedListNode.from(new int[]{1, 7});
+        head = LinkedList.init(new int[]{1, 7});
         LinkedListPrinter.print(reverse(head));
         System.out.println("----------------");
-        head = LinkedListNode.from(new int[]{1, 3, 5, 7});
+        head = LinkedList.init(new int[]{1, 3, 5, 7});
         LinkedListPrinter.print(reverse(head));
     }
 

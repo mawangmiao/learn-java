@@ -10,7 +10,7 @@ public class LinkedListLastKTest {
         System.out.println(lastK(head, 1).getValue());
         System.out.println(lastK(head, 2));
         System.out.println("----------------");
-        head = LinkedListNode.from(new int[]{1, 3, 5, 7});
+        head = LinkedList.init(new int[]{1, 3, 5, 7});
         System.out.println(lastK(head, 1).getValue());
         System.out.println(lastK(head, 3).getValue());
         System.out.println(lastK(head, 4).getValue());
