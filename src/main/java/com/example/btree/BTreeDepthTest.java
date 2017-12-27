@@ -7,33 +7,45 @@ public class BTreeDepthTest {
     public static void main(String[] args) {
         BTreeNode<Integer> root = createTree1();
         BTreePrinter.print(root);
-        int depth = BTreeDepth.getDepth(root);
-        System.out.println("5:" + depth);
+        int depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望5, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望3, 实际" + depth);
 
         root = null;
         BTreePrinter.print(root);
-        depth = BTreeDepth.getDepth(root);
-        System.out.println("0:" + depth);
+        depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望0, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望0, 实际" + depth);
 
         root = new BTreeNode<Integer>(1);
         BTreePrinter.print(root);
-        depth = BTreeDepth.getDepth(root);
-        System.out.println("1:" + depth);
+        depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望1, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望1, 实际" + depth);
 
         root = createTree2();
         BTreePrinter.print(root);
-        depth = BTreeDepth.getDepth(root);
-        System.out.println("2:" + depth);
+        depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望2, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望2, 实际" + depth);
 
         root = createTree3();
         BTreePrinter.print(root);
-        depth = BTreeDepth.getDepth(root);
-        System.out.println("4:" + depth);
+        depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望4, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望4, 实际" + depth);
 
         root = createTree4();
         BTreePrinter.print(root);
-        depth = BTreeDepth.getDepth(root);
-        System.out.println("4:" + depth);
+        depth = BTreeDepth.getMaxDepth(root);
+        System.out.println("期望4, 实际" + depth);
+        depth = BTreeDepth.getMinDepth(root);
+        System.out.println("期望4, 实际" + depth);
     }
 
 
