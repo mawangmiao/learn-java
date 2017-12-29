@@ -3,13 +3,18 @@ package com.example.linkedlist;
 public class LinkedListMergeTest {
 
     public static void main(String[] args) {
-        System.out.println(LinkedList.init(null));
-        System.out.println(LinkedList.init(new int[0]));
-        LinkedListPrinter.print(LinkedList.init(new int[]{1}));
-
-        LinkedListNode firstHead = LinkedList.init(new int[]{1, 3, 5, 7});
-        LinkedListNode secondHead = LinkedList.init(new int[]{1, 4, 5, 6, 8});
+        LinkedListNode firstHead = LinkedList.init(new int[]{1});
+        LinkedListNode secondHead = LinkedList.init(new int[]{2});
         LinkedListPrinter.print(merge(firstHead, secondHead));
+
+        firstHead = LinkedList.init(new int[]{1, 3, 5, 7});
+        secondHead = LinkedList.init(new int[]{1, 4, 5, 6, 8});
+        LinkedListPrinter.print(merge(firstHead, secondHead));
+
+        firstHead = LinkedList.init(new int[]{1});
+        secondHead = LinkedList.init(new int[]{4, 5, 6, 8});
+        LinkedListPrinter.print(merge(firstHead, secondHead));
+
         System.out.println(merge(null, null));
     }
 

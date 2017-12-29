@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.algorithm.BinarySearcher;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

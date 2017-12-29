@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.example.algorithm;
 
-class BinarySearcher {
+public class BinarySearcher {
 
-    static int search(int[] arr, int key) {
+    public static int search(int[] arr, int key) {
         return searchInterval(arr, key, 0, arr.length - 1);
     }
 
