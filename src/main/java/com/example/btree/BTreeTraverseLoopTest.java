@@ -54,8 +54,11 @@ public class BTreeTraverseLoopTest {
         BTreeNode<Integer> n24 = new BTreeNode<Integer>(20);
         BTreeNode<Integer> n31 = new BTreeNode<Integer>(4);
         BTreeNode<Integer> n32 = new BTreeNode<Integer>(7);
+        BTreeNode<Integer> n33 = new BTreeNode<Integer>(15);
+        BTreeNode<Integer> n34 = new BTreeNode<Integer>(25);
         BTreeNode<Integer> n41 = new BTreeNode<Integer>(6);
         BTreeNode<Integer> n42 = new BTreeNode<Integer>(8);
+
 
         root.left = n11;
         root.right = n12;
@@ -68,6 +71,9 @@ public class BTreeTraverseLoopTest {
 
         n22.left = n31;
         n22.right = n32;
+
+        n24.left = n33;
+        n24.right = n34;
 
         n32.left = n41;
         n32.right = n42;

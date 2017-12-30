@@ -12,7 +12,7 @@ public class NextLargestN {
     }
 
 
-    static int getCountForCurrentNumberOnly(int n) {
+    private static int getCountForCurrentNumberOnly(int n) {
 
         char[] charArray = String.valueOf(n).toCharArray();
         int count = 0;

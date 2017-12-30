@@ -27,7 +27,9 @@ public class NOneCountTest {
     }
 
     private static int efficientCount(int n) {
-        if (n < 0) {
+        return 0;
+        //TODO
+/*        if (n < 0) {
             return 0;
         } else if (n <= 9) {
             return 1;
@@ -39,7 +41,7 @@ public class NOneCountTest {
             int second = (firstNumber - 1) * efficientCount(10 * (strN.length() - 1) - 1);
             int third = efficientCount(otherNumber);
             return first + second + third;
-        }
+        }*/
     }
 
 }
