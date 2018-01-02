@@ -2,7 +2,7 @@ package com.example.btree;
 
 import org.apache.commons.lang3.Validate;
 
-public class BSearchTreeLowestCommonParent {
+public class BSearchTreeLowestCommonAncestor {
 
     public static BTreeNode<Integer> find(BTreeNode<Integer> root, int small, int large) {
         if (root == null) return null;

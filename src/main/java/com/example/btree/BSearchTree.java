@@ -5,25 +5,19 @@ class BSearchTree {
     static boolean isBSearchTree(BTreeNode<Integer> root) {
         if (root == null) return false;
 
-        return isBTreeInternal(root);
+        return isBSearchTreeInternal(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    private static boolean isBTreeInternal(BTreeNode<Integer> root) {
+    private static boolean isBSearchTreeInternal(BTreeNode<Integer> root, int min, int max) {
         if (root == null) {
             return true;
         }
-
-        if (root.left != null) {
-            if (root.left.data >= root.data) {
-                return false;
-            }
+        System.out.println("root.data: " + root.data + ", min: " + min + ", max: " + max);
+        if (root.data < min || root.data > max) {
+            System.out.println("发现问题, 结束");
+            return false;
         }
-        if (root.right != null) {
-            if (root.right.data < root.data) {
-                return false;
-            }
-        }
-
-        return isBTreeInternal(root.left) && isBTreeInternal(root.right);
+        return isBSearchTreeInternal(root.left, min, root.data - 1)
+               && isBSearchTreeInternal(root.right, root.data, max);
     }
 }

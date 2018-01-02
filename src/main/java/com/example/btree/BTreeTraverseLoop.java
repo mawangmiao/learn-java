@@ -40,19 +40,19 @@ public class BTreeTraverseLoop {
     public static <T extends Comparable<?>> List<BTreeNode<T>> postOrderTraverse(BTreeNode<T> root) {
         List<BTreeNode<T>> list = new ArrayList<>();
         Stack<BTreeNode<T>> stack = new Stack<>();
-        BTreeNode<T> previousPopNode = null;
+        BTreeNode<T> previousPoppedNode = null;
         while (root != null || !stack.isEmpty()) {
             if (root != null) {
                 stack.push(root);
                 root = root.left;//自己先缓存着, 先遍历左节点了来
             } else {//root为null, 但stack中还有数据
                 if (stack.peek().right != null
-                    && stack.peek().right != previousPopNode) {//如果不是叶节点, 而自己的右节点也还没有遍历过, 那么先遍历右节点
+                    && stack.peek().right != previousPoppedNode) {//如果不是叶节点, 并且自己的右节点也还没有遍历过, 那么先遍历右节点
                     root = stack.peek().right;
                 } else {//自己是叶节点, 或者自己的右节点已经遍历过
                     BTreeNode<T> node = stack.pop();
                     list.add(node);
-                    previousPopNode = node;
+                    previousPoppedNode = node;//root保持null不变, 继续遍历栈顶元素
                 }
             }
         }

@@ -1,40 +1,42 @@
 package com.example.btree;
 
-public class BSearchTreeLowestCommonParentTest {
+public class BTreeLowestCommonAncestorTest {
 
     public static void main(String[] args) {
         BTreeNode<Integer> root = createTree1();
         BTreePrinter.print(root);
-        BTreeNode<Integer> node = BSearchTreeLowestCommonParent.find(root, 3, 11);
+        BTreeNode<Integer> node = BTreeLowestCommonAncestor.find(root, 3, 11);
         System.out.println("期望9, 实际" + node.data);
-        node = BSearchTreeLowestCommonParent.find(root, 10, 20);
+        node = BTreeLowestCommonAncestor.find(root, 10, 20);
         System.out.println("期望11, 实际" + node.data);
-        node = BSearchTreeLowestCommonParent.find(root, 1, 10);
+        node = BTreeLowestCommonAncestor.find(root, 1, 10);
         System.out.println("期望9, 实际" + node.data);
-        node = BSearchTreeLowestCommonParent.find(root, 1, 8);
+        node = BTreeLowestCommonAncestor.find(root, 1, 8);
         System.out.println("期望3, 实际" + node.data);
-        node = BSearchTreeLowestCommonParent.find(root, 8, 20);
+        node = BTreeLowestCommonAncestor.find(root, 8, 20);
         System.out.println("期望9, 实际" + node.data);
-        node = BSearchTreeLowestCommonParent.find(root, 4, 5);
+        node = BTreeLowestCommonAncestor.find(root, 8, 20000);
+        System.out.println("期望null, 实际" + node);
+        node = BTreeLowestCommonAncestor.find(root, 4, 5);
         System.out.println("期望null, 实际" + node);
 
         root = createTree2();
         BTreePrinter.print(root);
-        node = BSearchTreeLowestCommonParent.find(root, 2, 9);
+        node = BTreeLowestCommonAncestor.find(root, 2, 9);
         System.out.println("期望8, 实际" + node.data);
 
-        node = BSearchTreeLowestCommonParent.find(null, 2, 9);
+        node = BTreeLowestCommonAncestor.find(null, 2, 9);
         System.out.println("期望null, 实际" + null);
 
 
         root = createTree3();
         BTreePrinter.print(root);
-        node = BSearchTreeLowestCommonParent.find(root, 3, 7);
+        node = BTreeLowestCommonAncestor.find(root, 3, 7);
         System.out.println("期望null, 实际" + null);
 
         root = createTree4();
         BTreePrinter.print(root);
-        node = BSearchTreeLowestCommonParent.find(root, 10, 11);
+        node = BTreeLowestCommonAncestor.find(root, 10, 11);
         System.out.println("期望null, 实际" + null);
     }
 
