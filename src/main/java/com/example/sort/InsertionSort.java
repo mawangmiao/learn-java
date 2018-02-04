@@ -2,7 +2,7 @@ package com.example.sort;
 
 import java.util.Arrays;
 
-import static com.example.sort.Data.NUMBERS;
+import static com.example.sort.TestData.NUMBERS;
 
 public class InsertionSort {
 

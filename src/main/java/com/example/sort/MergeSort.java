@@ -2,7 +2,7 @@ package com.example.sort;
 
 import java.util.Arrays;
 
-import static com.example.sort.Data.NUMBERS;
+import static com.example.sort.TestData.NUMBERS;
 
 public class MergeSort {
 
@@ -12,6 +12,7 @@ public class MergeSort {
     }
 
     private static void sort(int[] array, int start, int end) {
+        System.out.println("start: " + start + ",end: " + end);
         if (start >= end) return;
 
         int middle = (start + end) / 2;
@@ -24,6 +25,7 @@ public class MergeSort {
     }
 
     private static void merge(int[] array, int start, int middle, int end) {
+        System.out.println("start: " + start + ",middle: " + middle + ",end: " + end);
         int[] tmpArray = new int[array.length];
         int index1 = start;
         int index2 = middle + 1;

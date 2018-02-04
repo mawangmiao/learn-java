@@ -1,6 +1,6 @@
 package com.example.sort;
 
-public class Data {
+public class TestData {
 
     // 排序原始数据
     public static final int[] NUMBERS =
